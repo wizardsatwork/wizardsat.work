@@ -1,0 +1,24 @@
+{
+  "name": "wizardsat.work",
+  "version": "0.0.1",
+  "description": "wizardsat.work page, built using magic",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magic/exaple.org.git"
+  },
+  "author": "Jascha Ehrenreich <jascha@jaeh.at>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/magic/exaple.org/issues"
+  },
+  "homepage": "http://exaple.org",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "magicbuilder": "magic/builder",
+    "page": "^1.6.3"
+  }
+}
