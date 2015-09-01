@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "dev": "NODE_ENV='' gulp "
+    "production": "NODE_ENV='production' gulp"
   },
   "repository": {
     "type": "git",
