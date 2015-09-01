@@ -15,7 +15,7 @@ html(lang='en' manifest='manifest.appcache')
   body(id='♥').nojs
     div#wrapper
       header.main
-        a#logo(href='/')
+        a.logo(href='/')
           img(src='/img/wizardsatwork-logo.png')
           img(src='/img/wizardsatwork-text.png')
 
@@ -23,6 +23,9 @@ html(lang='en' manifest='manifest.appcache')
         if menuItems
           nav.main
             ul
+              li.logo
+                img(src='/img/wizardsatwork-logo.png')
+          
               for item in menuItems
                 li
                   a(
@@ -33,12 +36,13 @@ html(lang='en' manifest='manifest.appcache')
         block content
           span 404 page not found
 
-  footer.main wizards ♥ work
+    footer.main wizards ♥ work
 
-  script.
-    var d = document;
-    var b = d.body;
-    var s = d.createElement('script');
-    b.className = b.className.replace('nojs', 'js');
-    s.src = '/js/index.js';
-    b.appendChild(s);
+    script.
+      var d = document;
+      var b = d.body;
+      var s = d.createElement('script');
+      b.className = b.className.replace('nojs', 'js');
+      s.src = '/js/index.js';
+      b.appendChild(s);
+   
