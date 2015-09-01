@@ -8,6 +8,18 @@ const header = document.querySelector('header.main');
 const nav = document.querySelector('nav.main');
 const body = document.body;
 
+const allLinks = document.querySelectorAll('a');
+
+Object.keys(allLinks).forEach(key => {
+  const link = allLinks[key];
+  if (link && link.href) {
+    const hrefArray = link.href.split('#');
+    if (hrefArray.length) {
+      link.href = hrefArray.join('');
+    }
+  }
+});
+
 function isNumber(val) {
   return typeof val === 'number' && (parseInt(val) === parseInt(val));
 }
