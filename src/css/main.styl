@@ -53,20 +53,20 @@ header.main
   margin 0 0 .2em
   text-align center
 
-  a#logo
-    display inline-block
-    margin 0 auto
-    width 80%
+.logo
+  display inline-block
+  margin 0 auto
+  width 80%
 
-    img
-      float left
+  img
+    float left
 
-      &:first-child
-        width 15%
+    &:first-child
+      width 15%
 
-      &:last-child
-        width 87%
-        margin 5% 0 0 -3%
+    &:last-child
+      width 87%
+      margin 5% 0 0 -3%
 
 div#wrapper
   max-width 800px
@@ -101,12 +101,20 @@ nav.main
       margin 0 .2em
       float left
 
+      &.logo
+        width 30px
+        margin 0
+        display none
+
 body.scrolled
   nav.main
     position fixed
     top 0
     left 0
 
+    ul 
+      li.logo
+          display block
 
 section
   padding 3em 0
