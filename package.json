@@ -4,18 +4,19 @@
   "description": "wizardsat.work page, built using magic",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "dev": "NODE_ENV='' gulp "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magic/exaple.org.git"
+    "url": "git+https://github.com/wizardsatwork/wizardsat.work.git"
   },
   "author": "Jascha Ehrenreich <jascha@jaeh.at>",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/magic/exaple.org/issues"
+    "url": "https://github.com/wizardsatwork/wizardsat.work/issues"
   },
-  "homepage": "http://exaple.org",
+  "homepage": "http://wizardsat.work",
   "devDependencies": {
     "gulp": "^3.9.0",
     "magicbuilder": "magic/builder",
