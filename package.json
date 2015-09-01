@@ -17,10 +17,11 @@
     "url": "https://github.com/wizardsatwork/wizardsat.work/issues"
   },
   "homepage": "http://wizardsat.work",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.0",
     "builder": "magic/builder",
-    "page": "^1.6.3"
+    "page": "^1.6.3",
+    "utils": "magic/utils"
   },
   "contributors": [
     {
