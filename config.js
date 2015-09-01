@@ -23,11 +23,11 @@ var dirs = {
 var env = process.env.NODE_ENV || 'development';
 
 var menuItems = [
-  {href: '/♥', text: 'about', title:'What we are'},
-  {href: '/wizards', text: 'wizards', title: 'Who we are'},
-  {href: '/at', text: 'at', title: 'Where we are'},
-  {href: '/work', text: 'work', title: 'What we do'},
-  {href: '/contact', text: 'contact', title: 'How we communicate'},
+  {href: '#♥', text: 'about', title:'What we are'},
+  {href: '#wizards', text: 'wizards', title: 'Who we are'},
+  {href: '#at', text: 'at', title: 'Where we are'},
+  {href: '#work', text: 'work', title: 'What we do'},
+  {href: '#contact', text: 'contact', title: 'How we communicate'},
 ];
 
 var server = {
@@ -79,31 +79,31 @@ module.exports = {
     tasks: [
       {
         src: join(dirs.src, dirs.js, '**', '*.js'),
-        tasks: ['build:js', 'server'],
+        tasks: ['build:js'],
       },
       {
         src: join(dirs.src, dirs.css, '**', '*.styl'),
-        tasks: ['build:css', 'server'],
+        tasks: ['build:css'],
       },
       {
         src: join(dirs.src, dirs.html, '**', '*.jade'),
-        tasks: ['build:html', 'server'],
+        tasks: ['build:html'],
       },
       {
         src: join(dirs.config, '*'),
-        tasks: ['build', 'server'],
+        tasks: ['build'],
       },
       {
         src: 'config.js',
-        tasks: ['build', 'server'],
+        tasks: ['build'],
       },
       {
         src: join(dirs.src, dirs.assets, '**', '*'),
-        tasks: ['build:copy', 'server'],
+        tasks: ['build:copy'],
       },
       {
         src: join(dirs.src, appcache),
-        tasks: ['build:appcache', 'server'],
+        tasks: ['build:appcache'],
       }
     ],
   },
