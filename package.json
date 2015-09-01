@@ -19,7 +19,7 @@
   "homepage": "http://wizardsat.work",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "magicbuilder": "magic/builder",
+    "builder": "magic/builder",
     "page": "^1.6.3"
   }
 }
