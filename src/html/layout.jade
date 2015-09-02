@@ -22,6 +22,7 @@ html(lang='en')
       div.content
         if menuItems
           nav.main
+
             ul
               li.logo
                 img(src='/img/wizardsatwork-logo.png')
@@ -32,6 +33,11 @@ html(lang='en')
                     href= item.href
                     title= item.title
                   )= item.text
+
+            div.toggle
+              span
+              span
+              span
 
         block content
           span 404 page not found
