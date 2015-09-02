@@ -2,7 +2,6 @@ var join = require('path').join;
 
 var src = 'src';
 var build = 'build';
-var config = 'config';
 var appcache = 'manifest.appcache';
 
 var dirs = {
@@ -13,7 +12,7 @@ var dirs = {
   css: 'css',
   html: 'html',
   assets: 'assets',
-  config: join(__dirname, config),
+  config: join(__dirname, 'config'),
   img: 'img',
   pages: 'pages',
   gulp: 'gulp',
@@ -47,6 +46,8 @@ module.exports = {
   pages: '/ /index.html',
   pageItems: {
     '/': '/index.html',
+    '/%E2%99%A5': '/index.html',
+
   },
   menuItems: menuItems,
   env: env,
