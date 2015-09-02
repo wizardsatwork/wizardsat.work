@@ -76,7 +76,6 @@ module.exports = {
   watch: {
     src: src,
     appcache: appcache,
-    config: config,
     tasks: [
       {
         src: join(dirs.src, dirs.js, '**', '*.js'),
