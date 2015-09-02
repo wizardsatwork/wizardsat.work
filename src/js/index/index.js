@@ -1,2 +1,2 @@
-import './router';
+import 'utils/router';
 import './header';
