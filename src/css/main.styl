@@ -16,27 +16,9 @@ $heart-color = #f00
 // @stylint on
 
 body
-  background-color $body-bg-color
   font-size 18px
-  margin 0
-  padding 0
+  background-color $body-bg-color
   font-family Ubuntu, "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif
-
-h1
-  margin 0
-
-h2
-  text-align center
-  font-size 1.3em
-  margin 0 0 1em
-
-h3
-  margin 0 0 .5em
-  font-size 1.2em
-
-img
-  max-height 100%
-  max-width 100%
 
 a,
 a:link,
@@ -49,128 +31,20 @@ a:hover
 a.active
   text-decoration underline
 
-header.main
-  margin 0 0 .2em
-  text-align center
-
-.logo
-  display inline-block
-  margin 0 auto
-  width 80%
-
-  img
-    float left
-
-    &:first-child
-      width 15%
-
-    &:last-child
-      margin 5% 0 0 -3%
-      width 87%
-
-div#wrapper
-  margin 1em auto
-  max-width 800px
-  width 90%
-
 div.content
   background-color $div-bg-color
-  border-radius 1em
-  padding 0 30px 30px
-
-p
-  margin 0 0 .5em
 
 nav.main
-  display inline-block
-  font-size 1.1em
-  margin 0 0 1em
-  text-align center
-  width 100%
-
-  ul
-    background-color $body-bg-color
-    border-bottom-left-radius 2em
-    border-bottom-right-radius 2em
-    display inline-block
-    margin 0 auto
-    padding 0 1em .2em
-    position relative
-
-    li
-      float left
-      margin 0 .2em
-
-      &.logo
-        display none
-        margin 0
-        width 30px
-
-body.scrolled
-  nav.main
-    left 0
-    position fixed
-    top 0
-
-    ul 
-      li.logo
-          display block
-
-section
-  display inline-block
-  padding 3em 0
-  text-align center
-  width 100%
-
-  ul
-    li
-      margin 0 0 2em
-      text-align center
-
-  &#wizards
-    img
-      border-radius 1em
-
-  &#work
-    ul
-      li
-        clear both
-        display inline-block
-        float none
-        margin 0 0 2em
-        width 100%
-
-        a
-          float left
-          width 30%
-
-        div
-          float right
-          text-align left
-          width 65%
+  background-color $body-bg-color
 
 footer.main
   color $heart-color
-  font-size 1.2em
-  margin 10em 0 0
-  text-align center
-  width 100%
 
-@media (min-width 400px)
-  section#wizards
-    ul
-      li
-        float left
-        margin 0 1% 1em
-        width 48%
+.toggle
+  span
+    background-color $link-color
 
-@media (min-width 600px)
-  body
-    font-size 20px
-
-  section
-    ul
-      li
-        float left
-        margin 0 1%
-        width 31.333%
+@import 'layouts/main'
+@import 'layouts/mobile'
+@import 'layouts/tablet'
+@import 'layouts/desktop'
