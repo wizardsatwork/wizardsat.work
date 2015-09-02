@@ -1,10 +1,8 @@
+import {hasClass} from 'utils';
+
 const header = document.querySelector('header.main');
 const body = document.body;
 const scrolledClass = 'scrolled';
-
-function hasClass(node, className) {
-  return node.className.indexOf(className) > -1;
-}
 
 window.addEventListener('scroll', resizeHeader);
 resizeHeader();
