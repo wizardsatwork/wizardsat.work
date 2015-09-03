@@ -17,6 +17,7 @@ var dirs = {
   pages: 'pages',
   gulp: 'gulp',
   favicon: 'favicon.ico',
+  logs: join(__dirname, 'logs'),
 };
 
 var env = process.env.NODE_ENV || 'development';
