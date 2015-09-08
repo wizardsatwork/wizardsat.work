@@ -18,10 +18,12 @@
   },
   "homepage": "http://wizardsat.work",
   "dependencies": {
-    "gulp": "^3.9.0",
-    "builder": "magic/builder",
     "page": "^1.6.3",
     "utils": "magic/utils"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "builder": "magic/builder"
   },
   "contributors": [
     {
