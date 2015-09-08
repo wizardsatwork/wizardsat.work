@@ -143,7 +143,13 @@ module.exports = {
         lastname: 'peak',
         url: 'http://tompeak.com',
         job: 'webdev, gfx'
-      }
+      },
+      {
+        nick: 'j',
+        slug: 'j',
+        firstname: 'jay',
+        lastname: 'vaughn',
+      },
     ],
     at: [
       {
