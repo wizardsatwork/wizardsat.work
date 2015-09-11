@@ -42,13 +42,12 @@ var server = {
 };
 
 module.exports = {
-  CNAME: 'magicshifter.net',
+  CNAME: env === 'development' ? 'wizardsatwork': 'wizardsat.work',
   port: 1337,
   pages: '/ /index.html',
   pageItems: {
     '/': '/index.html',
     '/%E2%99%A5': '/index.html',
-
   },
   menuItems: menuItems,
   env: env,
