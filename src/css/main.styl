@@ -1,0 +1,50 @@
+@import nib
+global-reset()
+
+$body-color = #fefefe
+$body-bg-color = #f0f0f2
+$link-color = #555
+$link-hover-color = #000
+
+$div-bg-color = #fff
+
+$heart-color = #f00
+
+// @stylint off
+*
+  box-sizing border-box
+// @stylint on
+
+body
+  font-size 18px
+  background-color $body-bg-color
+  font-family Ubuntu, "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif
+
+a,
+a:link,
+a:visited
+  color $link-color
+
+a:hover
+  color $link-hover-color
+
+a.active
+  text-decoration underline
+
+div.content
+  background-color $div-bg-color
+
+header.main, nav.main
+  background-color $body-bg-color
+
+footer.main
+  color $heart-color
+
+.toggle
+  span
+    background-color $link-color
+
+@import 'layouts/main'
+@import 'layouts/mobile'
+@import 'layouts/tablet'
+@import 'layouts/desktop'
