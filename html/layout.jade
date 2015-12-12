@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    block title
+      title wizards@work
+
+    link(rel='icon' href='/favicon.ico')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    block meta
+
+    link(rel='stylesheet', href='/css/main.css')
+
+  body(id='♥').nojs
+    div#wrapper
+      header.main
+        a.logo(href='/')
+          img(src='/img/wizardsatwork-logo.png')
+          img(src='/img/wizardsatwork-text.png')
+
+        if menuItems
+          nav.main
+
+            ul
+              li.logo
+                img(src='/img/wizardsatwork-logo.png')
+          
+              for item in menuItems
+                li
+                  a(
+                    href= item.href
+                    title= item.title
+                  )= item.text
+
+            div.toggle
+              span
+              span
+              span
+
+      div.content
+        block content
+          span 404 page not found
+
+    footer.main wizards ♥ work
+
+    script.
+      var d = document;
+      var b = d.body;
+      var s = d.createElement('script');
+      b.className = b.className.replace('nojs', 'js');
+      s.src = '/js/index.js';
+      b.appendChild(s);
+   
