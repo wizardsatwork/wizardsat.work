@@ -1,4 +1,4 @@
-export CONTAINER_NAME=wiznwit-com
+export CONTAINER_NAME=wizardsat-work
 
 # default arguments:
 # export NODE_BIN=node_modules/.bin
