@@ -1,0 +1,55 @@
+$fill-1 = #4527A0
+$fill-2 = #DAD4EC
+$fill-3 = #8F7DC6
+
+svg#hat
+  height 30vw
+  max-height 30vh
+  max-width 30vh
+  width 30vw
+
+  .star
+    transform rotate(0deg)
+
+  &.animated .star
+    animation-delay 0ms
+    animation-duration .5s
+    animation-iteration-count 1
+    animation-name spin
+    animation-timing-function linear
+    transform-origin center
+
+  .p1,.p2, .p3, .p4, .p5,
+  .wand
+    opacity 0
+    animation-duration 400ms
+    animation-fill-mode forwards
+    animation-name fade-in
+
+  .p1
+    animation-delay 100ms
+    fill url(#g2)
+  .p2
+    animation-delay 200ms
+    fill url(#g2)
+  .p3
+    animation-delay 300ms
+    fill url(#g3)
+  .p4
+    animation-delay 400ms
+    fill url(#g4)
+  .p5
+    animation-delay 500ms
+    fill url(#g5)
+
+  .wand
+    animation-delay 600ms
+
+  .star,
+  .wand
+    fill $white
+
+  stop[offset="0"]
+    stop-color $fill-1
+  stop[offset="1"]
+    stop-color $fill-3
