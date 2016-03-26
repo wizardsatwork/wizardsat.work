@@ -1,6 +1,6 @@
 server {
   listen 8080;
-  server_name wiznwit.com;
+  server_name wizardsat.work www.wizardsat.work;
 
   location / {
     proxy_set_header   X-Real-IP $remote_addr;
