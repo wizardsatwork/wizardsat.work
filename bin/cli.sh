@@ -157,6 +157,14 @@ function debug() {
     --entrypoint=sh "$CONTAINER_NAME"
 }
 
+function update() {
+  git pull
+}
+
+function status() {
+  git status
+}
+
 function help() {
   echo "
 make [task]
@@ -177,6 +185,8 @@ clean     - remove build library and test files
 debug     - connect to a debug container
 logs      - tail the logs of the running container
 clean     - remove out dir
+update    - git pull
+status    - git status
 docker-rm - remote docker container
 "
 }
