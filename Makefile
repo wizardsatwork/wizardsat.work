@@ -75,7 +75,7 @@ ip:
 	@${CLI} $@
 
 update:
-  @${CLI} $@
+	@${CLI} $@
 
 status:
 	@${CLI} $@
