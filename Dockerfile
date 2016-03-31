@@ -19,7 +19,7 @@ RUN npm install --verbose --production
 COPY src ./src/
 COPY .babelrc ./
 
-RUN cp ./bin/cli.sh .
+COPY ./bin/cli.sh .
 
 RUN ./cli.sh build-src
 
