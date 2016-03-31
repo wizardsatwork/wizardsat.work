@@ -19,7 +19,7 @@ RUN npm install --verbose --production
 COPY src ./src/
 COPY .babelrc ./
 
-RUN cp node_modules/magic-root/bin/cli.sh .
+RUN cp ./bin/cli.sh .
 
 RUN ./cli.sh build-src
 
