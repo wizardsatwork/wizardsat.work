@@ -1,4 +1,4 @@
-# wizardsatwork/grundstein/postgres dockerfile
+# wizardsat.work dockerfile
 # VERSION 0.0.1
 
 FROM wiznwit:magic
