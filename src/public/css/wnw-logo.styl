@@ -8,16 +8,9 @@ svg#hat
   max-width 30vh
   width 30vw
 
+
   .star
     transform rotate(0deg)
-
-  &.animated .star
-    animation-delay 0ms
-    animation-duration .5s
-    animation-iteration-count 1
-    animation-name spin
-    animation-timing-function linear
-    transform-origin center
 
   .p1,.p2, .p3, .p4, .p5,
   .wand
@@ -53,3 +46,13 @@ svg#hat
     stop-color $fill-1
   stop[offset="1"]
     stop-color $fill-3
+
+&.animated
+  svg#hat
+    .star
+      animation-delay 0ms
+      animation-duration 500ms
+      animation-iteration-count 1
+      animation-name spin
+      animation-timing-function linear
+      transform-origin center
