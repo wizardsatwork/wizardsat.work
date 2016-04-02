@@ -1,7 +1,26 @@
-const hat = document.getElementById('hat');
+const d = document;
+const ANIMATED = 'animated';
+const HERO = 'hero';
+const HAT = 'hat';
 
-hat.addEventListener('click', evt => {
-  hat.classList.add('animated');
+const getById =
+  id =>
+    d.getElementById(id);
 
-  setTimeout(() => hat.classList.remove('animated'), 500);
-});
+const onClick =
+  evt => {
+    getById(HERO).classList.add(ANIMATED);
+
+    setTimeout(animate, 700);
+  };
+
+const animate =
+  () => {
+    const hero = getById(HERO);
+    hero.classList.remove(ANIMATED);
+    hero.innerHTML = hero.innerHTML;
+
+    getById(HAT).addEventListener('click', onClick);
+  };
+
+getById(HAT).addEventListener('click', onClick);
