@@ -2,6 +2,11 @@ const d = document;
 const ANIMATED = 'animated';
 const HERO = 'hero';
 const HAT = 'hat';
+const animDuration = 700;
+
+const hasClass =
+  (ele, cl) =>
+    ele.className.indexOf(cl) > -1;
 
 const getById =
   id =>
@@ -9,18 +14,28 @@ const getById =
 
 const onClick =
   evt => {
-    getById(HERO).classList.add(ANIMATED);
+    const hero = getById(HERO);
+    if (hasClass(hero, ANIMATED)) {
+      return;
+    }
 
-    setTimeout(animate, 700);
+    hero.classList.add(ANIMATED);
+
+    setTimeout(animate, animDuration);
   };
+
+const resetAnimation =
+  () =>
+    getById(HERO).classList.remove(ANIMATED);
 
 const animate =
   () => {
     const hero = getById(HERO);
-    hero.classList.remove(ANIMATED);
     hero.innerHTML = hero.innerHTML;
 
     getById(HAT).addEventListener('click', onClick);
+
+    setTimeout(resetAnimation, animDuration * 2)
   };
 
-getById(HAT).addEventListener('click', onClick);
+setTimeout(getById(HAT).addEventListener('click', onClick), animDuration);
