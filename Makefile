@@ -1,4 +1,4 @@
-export CONTAINER_NAME=wizardsat-work
+export CONTAINER_NAME=wiznwit-com
 
 # default arguments:
 # export NODE_BIN=node_modules/.bin
@@ -8,13 +8,21 @@ export CONTAINER_NAME=wizardsat-work
 # export NODEJS_SRC_FILES=src/config.js src/index.js
 # export NODEJS_OUT_FILE=out/index.js
 
-CLI:=./bin/cli.sh
+CLI:=./cli.sh
 
 .PHONY: \
 	all \
 	dev \
-	build	build-root build-src \
-	lint lint-fix jade-lint pug-lint stylint \
+	build \
+	build-root \
+	build-src \
+	install \
+	lint \
+	eslint \
+	eslint-fix \
+	jade-lint \
+	pug-lint \
+	stylint \
 	clean \
 	debug \
 	logs \
@@ -24,6 +32,7 @@ CLI:=./bin/cli.sh
 	update \
 	status \
 	help
+
 
 # TASKS
 
@@ -41,10 +50,16 @@ build-root:
 build-src:
 	@${CLI} $@
 
+install:
+	@${CLI} $@
+
 lint:
 	@${CLI} $@
 
-lint-fix:
+eslint:
+	@${CLI} $@
+
+eslint-fix:
 	@${CLI} $@
 
 jade-lint:
