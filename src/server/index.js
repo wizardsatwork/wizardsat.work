@@ -1,8 +1,10 @@
+import { join } from 'path';
 import { Magic, conjure } from 'magic-root';
 
 const app = conjure();
+const cwd = process.cwd();
 
-app.set('cwd', __dirname);
+app.set('cwd', join(cwd, 'src'));
 
 app.set('babelifyFiles', ['index']);
 
