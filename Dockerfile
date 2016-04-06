@@ -19,8 +19,6 @@ RUN npm install --verbose --production
 COPY src ./src/
 COPY .babelrc ./
 
-COPY ./cli.sh .
-
-RUN ./cli.sh build-src
+RUN ./build.sh
 
 CMD ["node", "dist/index.js"]

@@ -6,6 +6,7 @@ MAGIC_DIR=${MAGIC_DIR:-node_modules/magic-root}
 MAGIC_BIN=${MAGIC_BIN:-node_modules/magic-root/bin}
 NODEJS_SRC_FILES=${NODEJS_FILES:-"src/server"}
 NODEJS_DIST_DIR=${NODEJS_DIST_DIR:-"dist"}
+CLIENT_SRC_FILES=${CLIENT_SRC_FILES:-"src/client"}
 
 DIST_DIR=${DIST_DIR:-dist}
 
@@ -16,7 +17,6 @@ function echo-start() {
 function echo-end() {
   echo "FINISHED: $@"
 }
-
 
 function dev() {
   echo-start "dev environment"
@@ -71,7 +71,7 @@ function build-express-dirs() {
   mkdir -p $DIST_DIR/
 
   cp -r \
-    src/public src/views \
+    src/client \
     $DIST_DIR/
 
   echo-end "copying express views and public dir"
@@ -84,6 +84,9 @@ function run() {
   docker run \
     --name $CONTAINER_NAME \
     --detach \
+    --env DIST_DIR=$DIST_DIR \
+    --env SERVER_SRC_FILES=$NODEJS_SRC_FILES \
+    --env CLIENT_SRC_FILES=$CLIENT_SRC_FILES \
     $CONTAINER_NAME
 
   ip
@@ -147,7 +150,7 @@ function pug-lint() {
   echo-start "pug-lint"
 
   $NODE_BIN/pug-lint \
-    ./src/views/*
+    ./src/client/views/*
 
   echo-end "pug-lint"
 }
@@ -156,7 +159,7 @@ function stylint() {
   echo-start "stylint"
 
   $NODE_BIN/stylint \
-    src/public/css
+    src/client/public/css
 
   echo-end "stylint"
 }
