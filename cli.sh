@@ -31,8 +31,6 @@ function dev() {
 function build() {
   echo-start "building $CONTAINER_NAME docker container"
 
-  build-node-js
-
   docker build \
   --tag $CONTAINER_NAME \
   --build-arg NODE_ENV=production \
