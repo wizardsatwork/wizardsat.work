@@ -2,4 +2,4 @@
 !package.json
 !src
 !.babelrc
-!bin/cli.sh
+!cli.sh
