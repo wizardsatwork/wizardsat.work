@@ -4,7 +4,7 @@ NODE_BIN=${NODE_BIN:-node_modules/.bin}
 CONTAINER_NAME=${CONTAINER_NAME:-magic-localhost}
 MAGIC_DIR=${MAGIC_DIR:-node_modules/magic-root}
 MAGIC_BIN=${MAGIC_BIN:-node_modules/magic-root/bin}
-NODEJS_SRC_FILES=${NODEJS_FILES:-"src"}
+NODEJS_SRC_FILES=${NODEJS_FILES:-"src/server"}
 NODEJS_DIST_DIR=${NODEJS_DIST_DIR:-"dist"}
 
 DIST_DIR=${DIST_DIR:-dist}
