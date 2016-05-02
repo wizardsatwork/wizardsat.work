@@ -4,6 +4,7 @@
   "author": "Wizards & Witches <team@wiznwit.com>",
   "license": "AGPL-3.0",
   "devDependencies": {
+    "magic-dev": "github:magic/dev",
     "magic-root": "git://github.com/magic/root"
   },
   "contributors": [
